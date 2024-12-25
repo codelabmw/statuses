@@ -1,24 +1,22 @@
 name: Continuous Integration
 
 on:
-  release:
-    types: [ published ]
-  workflow_dispatch:
-  
+    release:
+        types: [published]
+    workflow_dispatch:
 
 permissions:
-  contents: read
+    contents: read
 
 jobs:
-  build:
+    build:
+        runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
 
-    steps:
-    - uses: actions/checkout@v4
-
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+            - name: Validate composer.json and composer.lock
+              run: composer validate --strict
 
     - name: Cache Composer packages
       id: composer-cache
@@ -28,6 +26,9 @@ jobs:
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
+          
+    - name: Update dependencies
+      run: composer update --no-progress
 
     - name: Update dependencies --with-all-dependencies
       run: composer update --no-progress
@@ -35,5 +36,5 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress
 
-    - name: Run test suites
-      run: composer run-script test
+            - name: Run test suites
+              run: composer run-script test

@@ -23,10 +23,15 @@
     "require": {
         "php": "^8.0"
     },
-    "require-dev": {
-        "phpunit/phpunit": "^11.0"
-    },
     "scripts": {
-        "test": "./vendor/bin/phpunit"
+        "test": "./vendor/bin/pest"
+    },
+    "require-dev": {
+        "pestphp/pest": "3.x-dev"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
     }
 }
