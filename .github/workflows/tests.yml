@@ -1,4 +1,4 @@
-name: Continuous Integration
+name: Tests
 
 on:
     release:
@@ -6,7 +6,7 @@ on:
     workflow_dispatch:
 
 jobs:
-    build:
+    ci:
         runs-on: ubuntu-latest
 
         steps:
