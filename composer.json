@@ -1,0 +1,32 @@
+{
+    "name": "codelabmw/statuses",
+    "description": "A PHP package that houses commonly used status classes and enums that can be used in PHP projects.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chikondi Kamwendo",
+            "email": "kondie208@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Codelabmw\\Statuses\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.0@dev"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
