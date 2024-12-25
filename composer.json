@@ -3,6 +3,12 @@
     "description": "A PHP package that houses commonly used status classes and enums that can be used in PHP projects.",
     "type": "library",
     "license": "MIT",
+    "keywords": [
+        "php",
+        "http-status-codes",
+        "http-status",
+        "http"
+    ],
     "authors": [
         {
             "name": "Chikondi Kamwendo",
