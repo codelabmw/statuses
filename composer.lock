@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03f33d667ef24523b436f521b11eec9b",
+    "content-hash": "0b17b3c228324d972127bfecafeffa90",
     "packages": [],
     "packages-dev": [
         {
@@ -247,16 +247,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "dev-main",
+            "version": "11.0.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "752cfeda8ebce1e2a6e7e026bf04d0fdf8966066"
+                "reference": "2b2dd4ed5ccc0328b27d876397d0aded2c3461c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/752cfeda8ebce1e2a6e7e026bf04d0fdf8966066",
-                "reference": "752cfeda8ebce1e2a6e7e026bf04d0fdf8966066",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/2b2dd4ed5ccc0328b27d876397d0aded2c3461c8",
+                "reference": "2b2dd4ed5ccc0328b27d876397d0aded2c3461c8",
                 "shasum": ""
             },
             "require": {
@@ -264,9 +264,10 @@
                 "ext-libxml": "*",
                 "ext-xmlwriter": "*",
                 "nikic/php-parser": "^5.3.1",
-                "php": ">=8.3",
+                "php": ">=8.2",
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-text-template": "^4.0.1",
+                "sebastian/code-unit-reverse-lookup": "^4.0.1",
                 "sebastian/complexity": "^4.0.1",
                 "sebastian/environment": "^7.2.0",
                 "sebastian/lines-of-code": "^3.0.1",
@@ -274,17 +275,16 @@
                 "theseer/tokenizer": "^1.2.3"
             },
             "require-dev": {
-                "phpunit/phpunit": "^12.0-dev"
+                "phpunit/phpunit": "^11.5.0"
             },
             "suggest": {
                 "ext-pcov": "PHP extension that provides line coverage",
                 "ext-xdebug": "PHP extension that provides line coverage as well as branch and path coverage"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "12.0.x-dev"
+                    "dev-main": "11.0.x-dev"
                 }
             },
             "autoload": {
@@ -313,7 +313,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/main"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/11.0"
             },
             "funding": [
                 {
@@ -321,7 +321,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-12-23T14:30:25+00:00"
+            "time": "2024-12-20T06:20:05+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -574,16 +574,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "dev-main",
+            "version": "11.5.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "9c465319b0b2de233d3bf658344ee75b33557388"
+                "reference": "77f55941fa23ae8e833a9d6023e841837f482070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/9c465319b0b2de233d3bf658344ee75b33557388",
-                "reference": "9c465319b0b2de233d3bf658344ee75b33557388",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/77f55941fa23ae8e833a9d6023e841837f482070",
+                "reference": "77f55941fa23ae8e833a9d6023e841837f482070",
                 "shasum": ""
             },
             "require": {
@@ -596,13 +596,14 @@
                 "myclabs/deep-copy": "^1.12.1",
                 "phar-io/manifest": "^2.0.4",
                 "phar-io/version": "^3.2.1",
-                "php": ">=8.3",
-                "phpunit/php-code-coverage": "^12.0-dev",
+                "php": ">=8.2",
+                "phpunit/php-code-coverage": "^11.0.8",
                 "phpunit/php-file-iterator": "^5.1.0",
                 "phpunit/php-invoker": "^5.0.1",
                 "phpunit/php-text-template": "^4.0.1",
                 "phpunit/php-timer": "^7.0.1",
                 "sebastian/cli-parser": "^3.0.2",
+                "sebastian/code-unit": "^3.0.2",
                 "sebastian/comparator": "^6.2.1",
                 "sebastian/diff": "^6.0.2",
                 "sebastian/environment": "^7.2.0",
@@ -613,14 +614,16 @@
                 "sebastian/version": "^5.0.2",
                 "staabm/side-effects-detector": "^1.0.5"
             },
-            "default-branch": true,
+            "suggest": {
+                "ext-soap": "To be able to generate mocks based on WSDL files"
+            },
             "bin": [
                 "phpunit"
             ],
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "12.0-dev"
+                    "dev-main": "11.5-dev"
                 }
             },
             "autoload": {
@@ -652,7 +655,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/main"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/11.5"
             },
             "funding": [
                 {
@@ -668,7 +671,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-12-24T06:10:43+00:00"
+            "time": "2024-12-23T06:11:49+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -727,6 +730,121 @@
                 }
             ],
             "time": "2024-12-13T07:51:31+00:00"
+        },
+        {
+            "name": "sebastian/code-unit",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/code-unit.git",
+                "reference": "a8e57f461ae122b14a487a0b1f345c7d0d5f96fe"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit/zipball/a8e57f461ae122b14a487a0b1f345c7d0d5f96fe",
+                "reference": "a8e57f461ae122b14a487a0b1f345c7d0d5f96fe",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.5"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de",
+                    "role": "lead"
+                }
+            ],
+            "description": "Collection of value objects that represent the PHP code units",
+            "homepage": "https://github.com/sebastianbergmann/code-unit",
+            "support": {
+                "issues": "https://github.com/sebastianbergmann/code-unit/issues",
+                "security": "https://github.com/sebastianbergmann/code-unit/security/policy",
+                "source": "https://github.com/sebastianbergmann/code-unit/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sebastianbergmann",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-12-13T07:42:02+00:00"
+        },
+        {
+            "name": "sebastian/code-unit-reverse-lookup",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sebastianbergmann/code-unit-reverse-lookup.git",
+                "reference": "7e0e511f5cc3f72dbec4f569f704ae63e267d427"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sebastianbergmann/code-unit-reverse-lookup/zipball/7e0e511f5cc3f72dbec4f569f704ae63e267d427",
+                "reference": "7e0e511f5cc3f72dbec4f569f704ae63e267d427",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^11.3"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Sebastian Bergmann",
+                    "email": "sebastian@phpunit.de"
+                }
+            ],
+            "description": "Looks up which function or method a line of code belongs to",
+            "homepage": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/",
+            "support": {
+                "issues": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/issues",
+                "security": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/security/policy",
+                "source": "https://github.com/sebastianbergmann/code-unit-reverse-lookup/tree/main"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sebastianbergmann",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-12-13T07:43:47+00:00"
         },
         {
             "name": "sebastian/comparator",
@@ -1597,9 +1715,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "phpunit/phpunit": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
