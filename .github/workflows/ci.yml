@@ -18,23 +18,20 @@ jobs:
             - name: Validate composer.json and composer.lock
               run: composer validate --strict
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
-          
-    - name: Update dependencies
-      run: composer update --no-progress
+            - name: Cache Composer packages
+              id: composer-cache
+              uses: actions/cache@v3
+              with:
+                  path: vendor
+                  key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-php-
 
-    - name: Update dependencies --with-all-dependencies
-      run: composer update --no-progress
-      
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+            - name: Update dependencies
+              run: composer update --no-progress
+
+            - name: Install dependencies
+              run: composer install --prefer-dist --no-progress
 
             - name: Run test suites
               run: composer run-script test
