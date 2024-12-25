@@ -1,4 +1,4 @@
-name: PHPUnit Tests
+name: Continuous Integration
 
 on:
   release:
